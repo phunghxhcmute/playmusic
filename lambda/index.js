@@ -38,7 +38,8 @@ const PlayAudioIntentHandler = {
 
         const speakOutput = 'Playing the audio stream.';
         const playBehavior = 'REPLACE_ALL';
-        const podcastUrl = 'https://audio1.maxi80.com';
+        //const podcastUrl = 'https://audio1.maxi80.com';
+        const podcastUrl = Util.getS3PreSignedUrl("Media/here_comes_the_fire_truck.mp3").replace(/&/g,'&amp;');
         
         /**
          * If your audio file is located on the S3 bucket in a hosted skill, you can use the line below to retrieve a presigned URL for the audio file.
